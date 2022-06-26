@@ -1,4 +1,27 @@
-#trialInput {
-  /*opacity: 0;*/
 
+.first-menu{
+  position: absolute;
+  display: inline-block;
+  left: 45%;
+  top: 45%;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+}
+
+.btn-low{
+  margin-top: 1em;
+}
+
+.hidden{
+  display: none;
+}
+
+footer{
+  display: block;
+  position: absolute;
+  bottom: 1%;
+  left:40%;
 }
