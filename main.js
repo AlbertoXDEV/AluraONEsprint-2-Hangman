@@ -1,4 +1,4 @@
-var words=["abracadabra","VOID","Zari-chan"]
+var words=["abracadabra"]
 var keyWord= []
 var hit=0
 var hanged=0
@@ -6,7 +6,32 @@ const dispayedWord= document.querySelector('#keyword')
 var display =[]
 var usedChars=[]
 const validChars= /[A-Za-z]/g
+const menu=document.querySelector("#start-menu")
+const form=document.querySelector("#word-form")
 
+function getRandomWord() {
+  min = Math.ceil(0);
+  max = Math.floor(words.length);
+  listNumber= Math.floor(Math.random() * (max - min) + min);
+  word=words[listNumber];
+  keyWord=Array.from(word);
+  console.log(keyWord);
+};
+
+function drawWord() {
+  for (var i=0; i < keyWord.length; i++) {
+    display.push("_")
+  };
+  dispayedWord.textContent=display.join(" ");
+  playerField.classList.remove('hidden');
+};
+
+function startgame() {
+  form.classList.add("hidden");
+  getRandomWord();
+  drawWord();
+  menu.classList.add("hidden");
+};
 
 function checkChar (event) {
 
@@ -35,6 +60,7 @@ function checkChar (event) {
         }
       } else if (letter.indexOf(-1)==-1) {
         if (hit==keyWord.length) {
+          console.log(keyword);
           playerField.classList.add('hidden')
           alert("we are the champions");
           return ;
@@ -55,10 +81,16 @@ function displayCorrect(index) {
         ++hit;
       }
     });
-
 }
-
-
 
    const playerField= document.querySelector('#trialInput');
    playerField.addEventListener('input',checkChar);
+
+   const startButton= document.querySelector('#start');
+   startButton.addEventListener("click",startgame);
+
+   const addNewWordButton=document.querySelector('#newWord')
+   addNewWordButton.addEventListener("click",function() {
+     menu.classList.add("hidden");
+     form.classList.remove("hidden");
+   });

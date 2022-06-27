@@ -20,10 +20,19 @@
     <main>
 
       <div class="first-menu" id="start-menu">
-        <button id="workplz" class="btn">Começar jogo</button>
-        <button id="newWord" class="btn btn-low">nova palavra</button>
+        <button id="start" class="btn">Começar jogo</button>
+        <button id="newWord" class="btn btn-low">Nova palavra</button>
       </div>
 
+      <div class="word-list hidden" id="word-form">
+        <form>
+          <label for="inputNewWord">Digite uma nova palavra para ser usada</label>
+          <input type="text" id="inputNewWord">
+          <button type="submit" class="btn" id="formAdd">Adicionar palavra</button>
+          <button class="btn btn-low" id="formStart">Começar jogo</button>
+        </form>
+
+      </div>
       <div id="hanged">
 
       </div>
@@ -43,7 +52,8 @@
     </footer>
 
   </body>
-  <script src="startScreen.js"></script>
+
   <script src='main.js'></script>
+  <script src='form.js'></script>
 
 </html>
