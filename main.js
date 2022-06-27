@@ -7,7 +7,7 @@ var display =[]
 var usedChars=[]
 const validChars= /[A-Za-z]/g
 const menu=document.querySelector("#start-menu")
-const form=document.querySelector("#word-form")
+const altMenu=document.querySelector("#word-list")
 
 function getRandomWord() {
   min = Math.ceil(0);
@@ -27,10 +27,10 @@ function drawWord() {
 };
 
 function startgame() {
-  form.classList.add("hidden");
+  altMenu.classList.add("hidden");
   getRandomWord();
   drawWord();
-  menu.classList.add("hidden");
+  altMenu.classList.add("hidden");
 };
 
 function checkChar (event) {
@@ -92,5 +92,5 @@ function displayCorrect(index) {
    const addNewWordButton=document.querySelector('#newWord')
    addNewWordButton.addEventListener("click",function() {
      menu.classList.add("hidden");
-     form.classList.remove("hidden");
+     altMenu.classList.remove("hidden");
    });

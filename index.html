@@ -24,17 +24,12 @@
         <button id="newWord" class="btn btn-low">Nova palavra</button>
       </div>
 
-      <div class="word-list hidden" id="word-form">
-        <form>
+      <div class="word-list hidden" id="word-list">
           <label for="inputNewWord">Digite em letras maiusculas uma nova palavra para ser usada</label>
           <input type="text" id="inputNewWord">
 
-          <div class="form-menu">
-          <button type="submit" class="btn" id="formAdd">Adicionar palavra</button>
-          <button class="btn btn-low" id="formStart">Começar jogo</button>
-          </div>
-
-        </form>
+          <button type="submit" class="btn" id="addWord">Adicionar palavra</button>
+          <button class="btn btn-low" id="altStart">Começar jogo</button>
 
       </div>
       <div id="hanged">
@@ -58,6 +53,6 @@
   </body>
 
   <script src='main.js'></script>
-  <script src='form.js'></script>
+  <script src='addWord.js'></script>
 
 </html>
