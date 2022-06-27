@@ -5,7 +5,6 @@ const submitWrdBtn=document.querySelector("#addWord");
 submitWrdBtn.addEventListener("click",function (event) {
   event.preventDefault();
   if (newWordInput.value.match(inputValidChars)!=null&&newWordInput.value.match(inputInvalidChars)==null) {
-    console.log(words);
       if (words.indexOf(newWordInput.value)==-1) {
         words.push(newWordInput.value)
         console.log(words);

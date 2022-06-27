@@ -10,11 +10,8 @@ const menu=document.querySelector("#start-menu")
 const altMenu=document.querySelector("#word-list")
 
 function getRandomWord() {
-  min = Math.ceil(0);
-  max = Math.floor(words.length);
-  listNumber= Math.floor(Math.random() * (max - min) + min);
-  word=words[listNumber];
-  keyWord=Array.from(word);
+  word=words[Math.floor(Math.random())];
+  keyWord=word.split("");
   console.log(keyWord);
 };
 
@@ -30,7 +27,7 @@ function startgame() {
   altMenu.classList.add("hidden");
   getRandomWord();
   drawWord();
-  altMenu.classList.add("hidden");
+  menu.classList.add("hidden");
 };
 
 function checkChar (event) {
