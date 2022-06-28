@@ -1,13 +1,14 @@
 var words=["abracadabra"]
 var keyWord= []
 var hit=0
-var hanged=0
+var miss=0
 const dispayedWord= document.querySelector('#keyword')
 var display =[]
 var usedChars=[]
 const validChars= /[A-Za-z]/g
 const menu=document.querySelector("#start-menu")
 const altMenu=document.querySelector("#word-list")
+const hangman=document.querySelector("#hanged")
 
 function getRandomWord() {
   word=words[Math.floor(Math.random())];
@@ -27,7 +28,9 @@ function startgame() {
   altMenu.classList.add("hidden");
   getRandomWord();
   drawWord();
+  hangedState0();
   menu.classList.add("hidden");
+  hangman.classList.remove("hidden");
 };
 
 function checkChar (event) {
@@ -62,7 +65,7 @@ function checkChar (event) {
           alert("we are the champions");
           return ;
         }
-        ++hanged;
+        ++miss;
       }
 } }
 

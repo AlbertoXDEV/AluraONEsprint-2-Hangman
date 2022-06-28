@@ -20,6 +20,13 @@
   margin-top: 20%;
 }
 
+.hanged{
+display: block;
+height: 50%;
+width: 25%;
+position: absolute;
+left: 37.5%;
+}
 
 .hidden{
   display: none;
