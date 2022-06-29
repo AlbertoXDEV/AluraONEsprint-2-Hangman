@@ -28,6 +28,48 @@ position: absolute;
 left: 37.5%;
 }
 
+#head{
+  position: absolute;
+  top: 1em;
+  left: 6em;
+}
+
+#torso{
+  position: absolute;
+  top: 7.4em;
+  left: 6.57em;
+}
+
+#leftArm{
+  position: absolute;
+  top: 7.4em;
+  left: 8.37em;
+}
+
+#rigthArm{
+  position: absolute;
+  top: 7.45em;
+  left: 3.76em;
+}
+
+#leftLeg{
+  position: absolute;
+  top: 13.95em;
+  left: 7.56em;
+}
+
+#rigthLeg{
+  position: absolute;
+  top: 13.95em;
+  left: 5.3em;
+}
+
+#hangedpng{
+  position: relative;
+  bottom: 23.5em;
+  left: -1.3em;
+}
+
 .hidden{
   display: none;
 }

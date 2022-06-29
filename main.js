@@ -1,10 +1,11 @@
 var words=["abracadabra"]
 var keyWord= []
 var hit=0
-var miss=-1
+var miss=0
 const dispayedWord= document.querySelector('#keyword')
 var display =[]
 var usedChars=[]
+var wrongChars=[]
 const validChars= /[A-Za-z]/g
 const menu=document.querySelector("#start-menu")
 const altMenu=document.querySelector("#word-list")
@@ -28,18 +29,14 @@ function startgame() {
   altMenu.classList.add("hidden");
   getRandomWord();
   drawWord();
-  hangedState0();
+  updateGame();
   menu.classList.add("hidden");
   hangman.classList.remove("hidden");
 };
 
 function checkChar (event) {
 
-    if (event.inputType=="insertText" && usedChars.indexOf(event.data)==-1) {
-      if (event.data.match(validChars)==null) {
-        alert("Use somente letras");
-        return
-      }
+    if (event.inputType=="insertText" && usedChars.indexOf(event.data)==-1 && validateChar(event)) {
       var letter=[]
       var idx=keyWord.indexOf(event.data);
       while (idx != -1) {
@@ -54,9 +51,9 @@ function checkChar (event) {
         displayCorrect(letter);
         usedChars.push(event.data);
         updateGame();
-        }else if (letter.indexOf(-1)==-1) {
+        }else{
           ++miss;
-          updateGame();
+          updateGame(miss);
         }
       }
     }
