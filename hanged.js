@@ -1,54 +1,50 @@
-const canvas=document.querySelector("canvas");
-const hanged=canvas.getContext("2d");
+function updateGame() {
+  if (hit==keyWord.length) {
+    playerField.classList.add('hidden')
+    alert("we are the champions");
+    return ;
+  }else {
+    const states=[{hangedState1()},{hangedState2()},{hangedState3()},{hangedState4()},{hangedState5()},{hangedState6()},{hangedState7()},{}]
+    states[miss]
+  }
+};
 
 function hangedState0() {
-
-  hanged.beginPath();
-  hanged.fillStyle="black";
-  hanged.moveTo(380,20);
-  hanged.lineTo(20,20);
-  hanged.stroke;
-}
+const pole=document.querySelector("#pole");
+pole.classList.remove("hidden")
+};
 
 function hangedState1() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-  hanged.arc(200,40,20,0,2*Math.pi);
-  //hanged.closePath();
-  hanged.Stroke();
-}
+const head=document.querySelector("#head");
+head.classList.remove("hidden")
+};
 
 function hangedState2() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-//  hanged.closePath();
-  hanged.Stroke();
-}
+const torso=document.querySelector("#torso");
+torso.classList.remove("hidden")
+};
 
 function hangedState3() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-//  hanged.closePath();
-  hanged.Stroke();
-}
+const leftArm=document.querySelector("#leftArm");
+leftArm.classList.remove("hidden")
+};
 
 function hangedState4() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-//  hanged.closePath();
-  hanged.Stroke();
-}
+const rigthArm=document.querySelector("#rigthArm");
+rigthArm.classList.remove("hidden")
+};
 
 function hangedState5() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-//  hanged.closePath();
-  hanged.Stroke();
-}
+const leftLeg=document.querySelector("#leftLeg");
+leftLeg.classList.remove("hidden")
+};
 
 function hangedState6() {
-  hanged.beginPath();
-  hanged.fillStyle("black");
-  hanged.closePath();
-  hanged.Stroke();
-}
+const rigthLeg=document.querySelector("#rigthLeg");
+rigthLeg.classList.remove("hidden")
+};
+
+function hangedState7() {
+const hanged=document.querySelector("#hangedpng");
+hanged.classList.remove("hidden")
+};

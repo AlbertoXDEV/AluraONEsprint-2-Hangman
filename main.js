@@ -1,7 +1,7 @@
 var words=["abracadabra"]
 var keyWord= []
 var hit=0
-var miss=0
+var miss=-1
 const dispayedWord= document.querySelector('#keyword')
 var display =[]
 var usedChars=[]
@@ -53,21 +53,13 @@ function checkChar (event) {
       if (letter.indexOf(-1)!=-1){
         displayCorrect(letter);
         usedChars.push(event.data);
-        if (hit==keyWord.length) {
-          playerField.classList.add('hidden')
-          alert("we are the champions");
-          return ;
+        updateGame();
+        }else if (letter.indexOf(-1)==-1) {
+          ++miss;
+          updateGame();
         }
-      } else if (letter.indexOf(-1)==-1) {
-        if (hit==keyWord.length) {
-          console.log(keyword);
-          playerField.classList.add('hidden')
-          alert("we are the champions");
-          return ;
-        }
-        ++miss;
       }
-} }
+    }
 
 function displayCorrect(index) {
     var ltrIdx=0
