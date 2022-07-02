@@ -1,8 +1,12 @@
+const usedField=document.querySelector(".usedLetters")
+const wrong=document.querySelector("#used")
+
 function validateChar(event) {
   if (event.data.match(validChars)==null) {
     alert("Use somente letras");
     return false
-  }else if (event.data.match(wrongChars)!=null) {
+  }else if (usedChars.indexOf(event.data)!=-1) {
+    console.log(usedChars.indexOf(event.data));
     alert("Você já usou esta letra")
     return false
   }else {
@@ -11,89 +15,18 @@ function validateChar(event) {
 
 }
 
-function isCharUsed(char) {
-  if (wrongChars.indexOf(char)!=-1) {
-    switch (char) {
-      case A:
+function drawUsedChars(char,type) {
 
-        break;
-      case B:
-
-        break;
-      case C:
-
-        break;
-      case D:
-
-        break;
-      case E:
-
-        break;
-      case F:
-
-        break;
-      case G:
-
-        break;
-      case H:
-
-        break;
-      case I:
-
-        break;
-      case J:
-
-        break;
-      case K:
-
-        break;
-      case L:
-
-        break;
-      case M:
-
-        break;
-      case N:
-
-        break;
-      case O:
-
-        break;
-      case P:
-
-        break;
-      case Q:
-
-        break;
-      case R:
-
-        break;
-      case S:
-
-        break;
-      case T:
-
-        break;
-      case U:
-
-        break;
-      case V:
-
-        break;
-      case W:
-
-        break;
-      case X:
-
-        break;
-      case Y:
-
-        break;
-      case Z:
-
-        break;
-      default:
-
-    }
+  if (type==0) {
+    wrong.textContent=wrong.textContent+char
+  }else if (type==1) {
+    let newUsedChar=document.createElement("p");
+    newUsedChar.innerHTML=char;
+    newUsedChar.classList.add("wrongChar");
+    let img=document.createElement("img , src=imgs/wrongDash")
+    //img.classList.add("wrongDash");
+    newUsedChar.appendChild(img);
+    usedField.appendChild(newUsedChar);
   }
-}
+
+  }

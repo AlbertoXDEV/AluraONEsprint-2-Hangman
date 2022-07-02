@@ -7,6 +7,9 @@
     <title>Alura sprint 2 - Forca</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300&display=swap" rel="stylesheet">
   </head>
 
   <body style="background-color: gray;">
@@ -43,11 +46,14 @@
         <img src="imgs/hanged.png" class="hidden" id="hangedpng">
       </div>
 
-      <div>
+      <div class="word">
         <p id="keyword"></p>
+        <input type="text" name="hiddenInput" id='trialInput' class="hidden">
       </div>
 
-    <input type="text" name="hiddenInput" id='trialInput' class="hidden">
+      <div class="usedLetters">
+        <p id="used"></p>
+      </div>
 
     </main>
 

@@ -5,6 +5,8 @@ const leftArm=document.querySelector("#leftArm");
 const rigthArm=document.querySelector("#rigthArm");
 const leftLeg=document.querySelector("#leftLeg");
 const rigthLeg=document.querySelector("#rigthLeg");
+const hanged=document.querySelector("#hangedpng");
+const hangDiv=document.querySelector("#hanged")
 
 function updateGame(state) {
 
@@ -28,7 +30,6 @@ function updateGame(state) {
         rigthLeg.classList.remove("hidden");
         break;
       case 7:
-        const hanged=document.querySelector("#hangedpng");
         pole.classList.add("hidden")
         head.classList.add("hidden");
         torso.classList.add("hidden");
@@ -41,19 +42,9 @@ function updateGame(state) {
         alert("Game Over")
         break;
         case 8:
-          if (hit==keyWord.length) {
             playerField.classList.add('hidden')
-            pole.classList.add("hidden")
-            head.classList.add("hidden");
-            torso.classList.add("hidden");
-            leftArm.classList.add("hidden");
-            rigthArm.classList.add("hidden");
-            leftLeg.classList.add("hidden");
-            rigthLeg.classList.add("hidden");
-            hanged.classList.add("hidden");
-            playerField.classList.add('hidden');
+            hangDiv.classList.add("hidden")
             alert("we are the champions");
-          }
           break;
       default:
         pole.classList.remove("hidden")

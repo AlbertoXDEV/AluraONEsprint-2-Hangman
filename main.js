@@ -36,7 +36,7 @@ function startgame() {
 
 function checkChar (event) {
 
-    if (event.inputType=="insertText" && usedChars.indexOf(event.data)==-1 && validateChar(event)) {
+    if (event.inputType=="insertText" && validateChar(event)) {
       var letter=[]
       var idx=keyWord.indexOf(event.data);
       while (idx != -1) {
@@ -50,10 +50,16 @@ function checkChar (event) {
       if (letter.indexOf(-1)!=-1){
         displayCorrect(letter);
         usedChars.push(event.data);
-        updateGame();
+        drawUsedChars(event.data,0)
+        if (hit==keyWord.length) {
+        updateGame(8);
+      };
         }else{
           ++miss;
+          usedChars.push(event.data);
+          wrongChars.push(event.data);
           updateGame(miss);
+          drawUsedChars(event.data,1);
         }
       }
     }

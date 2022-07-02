@@ -20,12 +20,25 @@
   margin-top: 20%;
 }
 
+.word{
+  position: absolute;
+  bottom: 35%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto Serif', serif;
+  font-size: 3ch;
+}
+
+#keyword{
+  margin-bottom: 1%;
+}
+
 .hanged{
 display: block;
-height: 50%;
-width: 25%;
 position: absolute;
 left: 37.5%;
+bottom: 45%;
 }
 
 #head{
@@ -66,8 +79,16 @@ left: 37.5%;
 
 #hangedpng{
   position: relative;
-  bottom: 23.5em;
   left: -1.3em;
+}
+.usedLetters{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 25%;
+}
+.wrongChar{
+  display: inline;
 }
 
 .hidden{
@@ -76,7 +97,9 @@ left: 37.5%;
 
 footer{
   display: block;
+  width: 100%;
   position: absolute;
   bottom: 1%;
-  left:40%;
+  text-align: center;
+
 }
