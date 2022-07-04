@@ -31,7 +31,8 @@
 }
 
 #keyword{
-  margin-bottom: 1%;
+  position: relative;
+  top: 20%;
 }
 
 .hanged{
@@ -89,6 +90,14 @@ bottom: 45%;
 }
 .wrongChar{
   display: inline;
+}
+
+.redDash{
+  background-image: url(imgs/wrongDash.png);
+  height: 1ch;
+  width: 1ch;
+  position: relative;
+  right: 1ch;
 }
 
 .hidden{

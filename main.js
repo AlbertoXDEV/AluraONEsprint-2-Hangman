@@ -3,6 +3,7 @@ var keyWord= []
 var hit=0
 var miss=0
 const dispayedWord= document.querySelector('#keyword')
+const dashes=document.querySelector('#dashes')
 var display =[]
 var usedChars=[]
 var wrongChars=[]
@@ -21,7 +22,12 @@ function drawWord() {
   for (var i=0; i < keyWord.length; i++) {
     display.push("_")
   };
-  dispayedWord.textContent=display.join(" ");
+  dashes.textContent=display.join(" ");
+  display=[];
+  for (var i=0; i < keyWord.length; i++) {
+    display.push(" ")
+  };
+  dispayedWord.textContent=display.join("");
   playerField.classList.remove('hidden');
 };
 
