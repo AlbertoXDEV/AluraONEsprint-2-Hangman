@@ -28,7 +28,7 @@ function drawWord() {
     display.push(" ")
   };
   dispayedWord.textContent=display.join("");
-  playerField.classList.remove('hidden');
+  input.classList.remove('hidden');
 };
 
 function startgame() {
@@ -84,8 +84,8 @@ function displayCorrect(index) {
     });
 }
 
-   const playerField= document.querySelector('#trialInput');
-   playerField.addEventListener('input',checkChar);
+   const input= document.querySelector('#trialInput');
+   input.addEventListener('input',checkChar);
 
    const startButton= document.querySelector('#start');
    startButton.addEventListener("click",startgame);

@@ -21,6 +21,8 @@
     </header>
 
     <main>
+      <p id="loss" class="endmsg loss hidden">Fim de Jogo</p>
+      <p id="win" class="endmsg win hidden">Você Venceu. Parabéns!</p>
 
       <div class="first-menu" id="start-menu">
         <button id="start" class="btn">Começar jogo</button>
@@ -46,15 +48,17 @@
         <img src="imgs/hanged.png" class="hidden" id="hangedpng">
       </div>
 
+      <div id="playarea">
       <div class="word">
         <p id="keyword"></p>
         <p id="dashes"></p>
-        <input type="text" name="hiddenInput" id='trialInput' class="hidden">
       </div>
-
       <div class="usedLetters">
         <p id="used"></p>
       </div>
+      <textarea id='trialInput' class="input hidden"></textarea>
+      </div>
+
 
     </main>
 
@@ -65,6 +69,7 @@
     </footer>
 
   </body>
+  <script src="messages.js"></script>
   <script src='characterHandler.js'></script>
   <script src='updateState.js'></script>
   <script src='main.js'></script>

@@ -1,3 +1,31 @@
+.endmsg{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  text-align: center;
+  top: 10em;
+  position: relative;
+  transition: 1s;
+}
+
+.win{
+  color: aqua;
+  box-shadow: inset 1px 1px 1ch 3px springgreen;
+  border-radius: 5px ;
+}
+
+.loss{
+  color: crimson;
+  box-shadow: inset 1px 1px 1ch 3px purple;
+  border-radius: 5px ;
+  position: absolute;
+  left: 40%;
+  top: 60%;
+}
+
+.pop{
+  transform: scale(5);
+}
 
 .first-menu{
   position: absolute;
@@ -33,6 +61,15 @@
 #keyword{
   position: relative;
   top: 20%;
+}
+
+.input{
+  width: 95%;
+  height: 95%;
+  opacity: 0%;
+  position: absolute;
+  left: 2%;
+  top: 0%;
 }
 
 .hanged{

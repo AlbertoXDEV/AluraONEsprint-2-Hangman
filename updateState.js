@@ -6,7 +6,8 @@ const rigthArm=document.querySelector("#rigthArm");
 const leftLeg=document.querySelector("#leftLeg");
 const rigthLeg=document.querySelector("#rigthLeg");
 const hanged=document.querySelector("#hangedpng");
-const hangDiv=document.querySelector("#hanged")
+const hangDiv=document.querySelector("#hanged");
+const playField= document.querySelector('#playarea');
 
 function updateGame(state) {
 
@@ -38,15 +39,15 @@ function updateGame(state) {
         leftLeg.classList.add("hidden");
         rigthLeg.classList.add("hidden");
         hanged.classList.remove("hidden");
-        playerField.classList.add('hidden');
-        alert("Game Over")
+        playField.classList.add("hidden");
+        animateLoss();
         break;
         case 8:
-            playerField.classList.add('hidden')
-            hangDiv.classList.add("hidden")
-            alert("we are the champions");
+            hangDiv.classList.add("hidden");
+            playField.classList.add("hidden");
+            animateWin();
           break;
       default:
-        pole.classList.remove("hidden")
+        pole.classList.remove("hidden");
     }
 };

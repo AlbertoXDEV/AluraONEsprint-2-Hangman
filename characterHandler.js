@@ -6,7 +6,6 @@ function validateChar(event) {
     alert("Use somente letras");
     return false
   }else if (usedChars.indexOf(event.data)!=-1) {
-    console.log(usedChars.indexOf(event.data));
     alert("Você já usou esta letra")
     return false
   }else {
