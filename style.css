@@ -3,7 +3,7 @@
   margin-right: auto;
   width: 20%;
   text-align: center;
-  top: 1000%;
+  top: 10em;
   position: relative;
   transition: 1s;
 }
@@ -20,7 +20,7 @@
   border-radius: 5px ;
   position: absolute;
   left: 40%;
-  top: 60%;
+  top: 65%;
 }
 
 .pop{
@@ -41,6 +41,29 @@
   top: 43%;
   width: 10%;
   height: 10%;
+}
+
+.word-list label{
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: white;
+  top: 20%;
+  position: absolute;
+}
+
+.word-list input{
+  position: absolute;
+  top: 33%;
+  width: 20%;
+  left: 40%;
+}
+
+.menu-2{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 45%;
 }
 
 .menu-3{

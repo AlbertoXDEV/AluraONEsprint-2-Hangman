@@ -114,6 +114,7 @@ function changeMenu() {
   menu.classList.add("hidden");
   end.classList.add("hidden");
   altMenu.classList.remove("hidden");
+  hanged.classList.add("hidden");
 
 }
 
