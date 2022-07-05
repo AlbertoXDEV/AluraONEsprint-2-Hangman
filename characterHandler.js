@@ -1,5 +1,5 @@
-const usedField=document.querySelector(".usedLetters")
-const wrong=document.querySelector("#used")
+const wrongField=document.querySelector("#wrongLetters")
+const used=document.querySelector("#used")
 
 function validateChar(event) {
   if (event.data.match(validChars)==null) {
@@ -17,7 +17,7 @@ function validateChar(event) {
 function drawUsedChars(char,type) {
 
   if (type==0) {
-    wrong.textContent=wrong.textContent+char
+    used.textContent=used.textContent+char
   }else if (type==1) {
     let newUsedChar=document.createElement("p");
     newUsedChar.innerHTML=char;
@@ -25,7 +25,7 @@ function drawUsedChars(char,type) {
     let img=document.createElement("img")
     img.classList.add("redDash");
     newUsedChar.appendChild(img);
-    usedField.appendChild(newUsedChar);
+    wrongField.appendChild(newUsedChar);
   }
 
   }

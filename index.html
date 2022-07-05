@@ -21,8 +21,6 @@
     </header>
 
     <main>
-      <p id="loss" class="endmsg loss hidden">Fim de Jogo</p>
-      <p id="win" class="endmsg win hidden">Você Venceu. Parabéns!</p>
 
       <div class="first-menu" id="start-menu">
         <button id="start" class="btn">Começar jogo</button>
@@ -37,6 +35,7 @@
           <button class="btn btn-low" id="altStart">Começar jogo</button>
 
       </div>
+
       <div id="hanged" class="hanged hidden">
         <img src="imgs/pole.png" class="hidden" id="pole">
         <img src="imgs/head.png" class="hidden" id="head">
@@ -49,16 +48,28 @@
       </div>
 
       <div id="playarea">
-      <div class="word">
-        <p id="keyword"></p>
-        <p id="dashes"></p>
+
+      <div id="keyword" class="word">
+        
       </div>
+
       <div class="usedLetters">
         <p id="used"></p>
+        <div id="wrongLetters">
+        </div>
       </div>
+
       <textarea id='trialInput' class="input hidden"></textarea>
       </div>
 
+      <div id="endgame" class="hidden">
+
+      <p id="loss" class="endmsg loss hidden">Fim de Jogo</p>
+      <p id="win" class="endmsg win hidden">Você Venceu. Parabéns!</p>
+      <button id="restart" class="btn">Recomeçar jogo</button>
+      <button id="newWord2" class="btn btn-low">Nova palavra</button>
+
+      </div>
 
     </main>
 

@@ -1,4 +1,4 @@
-var words=["abracadabra"]
+var words=["ABRACADABRA","GALAXIA","CIDADE","COMPUTADOR"]
 var keyWord= []
 var hit=0
 var miss=0
@@ -10,17 +10,17 @@ var wrongChars=[]
 const validChars= /[A-Za-z]/g
 const menu=document.querySelector("#start-menu")
 const altMenu=document.querySelector("#word-list")
-const hangman=document.querySelector("#hanged")
+const hangman=document.querySelector("#hanged");
 
 function getRandomWord() {
-  word=words[Math.floor(Math.random())];
+  var word=words[Math.round(Math.random()*words.length)];
   keyWord=word.split("");
-  console.log(keyWord);
 };
 
 function drawWord() {
   for (var i=0; i < keyWord.length; i++) {
-    display.push("_")
+
+  /*  display.push("_")
   };
   dashes.textContent=display.join(" ");
   display=[];
@@ -28,15 +28,37 @@ function drawWord() {
     display.push(" ")
   };
   dispayedWord.textContent=display.join("");
-  input.classList.remove('hidden');
+  input.classList.remove('hidden');*/
 };
 
-function startgame() {
+function primeGame() {
   altMenu.classList.add("hidden");
+  dispayedWord.innerHTML="";
+  display=[];
+  menu.classList.add("hidden");
+  pole.classList.add("hidden")
+  head.classList.add("hidden");
+  torso.classList.add("hidden");
+  leftArm.classList.add("hidden");
+  rigthArm.classList.add("hidden");
+  leftLeg.classList.add("hidden");
+  rigthLeg.classList.add("hidden");
+  hanged.classList.add("hidden");
+  wrongField.innerHTML="";
+  used.innerHTML="";
+  usedChars=[];
+  wrongChars=[];
+  keyWord= [];
+  hit=0;
+  miss=0;
+}
+
+function startgame() {
+  primeGame();
   getRandomWord();
   drawWord();
   updateGame();
-  menu.classList.add("hidden");
+  playField.classList.remove("hidden");
   hangman.classList.remove("hidden");
 };
 
@@ -77,7 +99,7 @@ function displayCorrect(index) {
       ltrIdxVle=index[ltrIdx]
       if (ltrIdxVle!=-1) {
         display.splice(ltrIdxVle,1,keyWord[ltrIdxVle]);
-        dispayedWord.textContent=display.join(" ");
+        dispayedWord.textContent=display.join(" ");
         ++ltrIdx;
         ++hit;
       }
@@ -95,3 +117,13 @@ function displayCorrect(index) {
      menu.classList.add("hidden");
      altMenu.classList.remove("hidden");
    });
+
+   const restartBtn = document.querySelector('#restart');
+   restartBtn.addEventListener("click",function () {
+     end.classList.add("hidden");
+     winMsg.classList.add("hidden");
+     lossMsg.classList.add("hidden");
+     startgame();
+   } )
+
+   const scndAddBtn = document.querySelector('#newWord2');
