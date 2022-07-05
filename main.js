@@ -110,6 +110,13 @@ function displayCorrect(index) {
     });
 }
 
+function changeMenu() {
+  menu.classList.add("hidden");
+  end.classList.add("hidden");
+  altMenu.classList.remove("hidden");
+
+}
+
    const input= document.querySelector('#trialInput');
    input.addEventListener('input',checkChar);
 
@@ -117,10 +124,7 @@ function displayCorrect(index) {
    startButton.addEventListener("click",startgame);
 
    const addNewWordButton=document.querySelector('#newWord')
-   addNewWordButton.addEventListener("click",function() {
-     menu.classList.add("hidden");
-     altMenu.classList.remove("hidden");
-   });
+   addNewWordButton.addEventListener("click",changeMenu);
 
    const restartBtn = document.querySelector('#restart');
    restartBtn.addEventListener("click",function () {
@@ -131,3 +135,4 @@ function displayCorrect(index) {
    } )
 
    const scndAddBtn = document.querySelector('#newWord2');
+   scndAddBtn.addEventListener("click",changeMenu);
