@@ -3,11 +3,10 @@ var keyWord= []
 var hit=0
 var miss=0
 const dispayedWord= document.querySelector('#keyword')
-const dashes=document.querySelector('#dashes')
 var display =[]
 var usedChars=[]
 var wrongChars=[]
-const validChars= /[A-Za-z]/g
+const validChars= /[A-Z]/g
 const menu=document.querySelector("#start-menu")
 const altMenu=document.querySelector("#word-list")
 const hangman=document.querySelector("#hanged");
@@ -19,20 +18,25 @@ function getRandomWord() {
 
 function drawWord() {
   for (var i=0; i < keyWord.length; i++) {
-
-  /*  display.push("_")
-  };
-  dashes.textContent=display.join(" ");
-  display=[];
-  for (var i=0; i < keyWord.length; i++) {
-    display.push(" ")
-  };
-  dispayedWord.textContent=display.join("");
-  input.classList.remove('hidden');*/
+    let char = document.createElement("span")
+    char.setAttribute("id","letter"+i)
+    char.classList.add("letter")
+    let space = document.createElement("p")
+    space.setAttribute("id","space"+i)
+    space.textContent=""
+    char.appendChild(space)
+    let dash = document.createElement("p")
+    dash.setAttribute("id","dash"+i)
+    dash.textContent="_"
+    char.appendChild(dash)
+    dispayedWord.appendChild(char)
+  }
+  input.classList.remove('hidden');
 };
 
 function primeGame() {
   altMenu.classList.add("hidden");
+  reveal.classList.add("hidden");
   dispayedWord.innerHTML="";
   display=[];
   menu.classList.add("hidden");
@@ -93,13 +97,13 @@ function checkChar (event) {
     }
 
 function displayCorrect(index) {
-    var ltrIdx=0
-    var ltrIdxVle=0
-    index.forEach((item) => {
-      ltrIdxVle=index[ltrIdx]
-      if (ltrIdxVle!=-1) {
-        display.splice(ltrIdxVle,1,keyWord[ltrIdxVle]);
-        dispayedWord.textContent=display.join(" ");
+  var ltrIdx=0
+  var ltrIdxVle=0
+  index.forEach((item) => {
+    ltrIdxVle=index[ltrIdx]
+    if (ltrIdxVle!=-1) {
+        let letter= document.getElementById('space'+ltrIdxVle)
+        letter.textContent=keyWord[ltrIdxVle]
         ++ltrIdx;
         ++hit;
       }

@@ -36,6 +36,24 @@
   height: 10%;
 }
 
+.menu-3{
+  display: inline-block;
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
+  width: 30%;
+}
+
+.end-btn{
+  float: left;
+  border-radius: 15%;
+  box-shadow: 2px 2px 5px 1px rgb(0, 0, 0);
+}
+
+.end-btn-rigth{
+  float: right;
+}
+
 .btn{
   display: block;
   width: 100%;
@@ -58,9 +76,11 @@
   font-size: 3ch;
 }
 
-#keyword{
-  position: relative;
-  top: 20%;
+.letter{
+  display: inline-block;
+  width: 1ch;
+  margin-left: 0.25ch;
+  margin-right: 0.25ch;
 }
 
 .input{

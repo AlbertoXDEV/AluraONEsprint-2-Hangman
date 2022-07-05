@@ -3,7 +3,7 @@ const used=document.querySelector("#used")
 
 function validateChar(event) {
   if (event.data.match(validChars)==null) {
-    alert("Use somente letras");
+    alert("Use somente letras maiúsculas");
     return false
   }else if (usedChars.indexOf(event.data)!=-1) {
     alert("Você já usou esta letra")

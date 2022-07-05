@@ -30,10 +30,10 @@
       <div class="word-list hidden" id="word-list">
           <label for="inputNewWord">Digite em letras maiusculas uma nova palavra para ser usada</label>
           <input type="text" id="inputNewWord">
-
-          <button type="submit" class="btn" id="addWord">Adicionar palavra</button>
-          <button class="btn btn-low" id="altStart">Começar jogo</button>
-
+          <div class=menu-2>
+            <button type="submit" class="btn" id="addWord">Adicionar palavra</button>
+            <button class="btn btn-low" id="altStart">Começar jogo</button>
+          </div>
       </div>
 
       <div id="hanged" class="hanged hidden">
@@ -50,7 +50,7 @@
       <div id="playarea">
 
       <div id="keyword" class="word">
-        
+
       </div>
 
       <div class="usedLetters">
@@ -66,9 +66,11 @@
 
       <p id="loss" class="endmsg loss hidden">Fim de Jogo</p>
       <p id="win" class="endmsg win hidden">Você Venceu. Parabéns!</p>
-      <button id="restart" class="btn">Recomeçar jogo</button>
-      <button id="newWord2" class="btn btn-low">Nova palavra</button>
-
+      <p id="final" class="reveal hidden"></p>
+      <div class="menu-3">
+        <button id="restart" class="end-btn">Recomeçar jogo</button>
+        <button id="newWord2" class="end-btn end-btn-rigth">Nova palavra</button>
+      </div>
       </div>
 
     </main>
