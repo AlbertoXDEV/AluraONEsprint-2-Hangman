@@ -22,8 +22,9 @@ function drawUsedChars(char,type) {
     let newUsedChar=document.createElement("p");
     newUsedChar.innerHTML=char;
     newUsedChar.classList.add("wrongChar");
-    let img=document.createElement("img")
-    img.classList.add("redDash");
+    let img=document.createElement("img");
+    img.setAttribute("src","imgs/wrongDash.png");
+    img.classList.add("redDash")
     newUsedChar.appendChild(img);
     wrongField.appendChild(newUsedChar);
   }

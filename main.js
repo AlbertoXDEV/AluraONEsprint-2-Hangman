@@ -1,19 +1,25 @@
-var words=["ABRACADABRA","GALAXIA","CIDADE","COMPUTADOR"]
-var keyWord= []
-var hit=0
-var miss=0
-const dispayedWord= document.querySelector('#keyword')
-var display =[]
-var usedChars=[]
-var wrongChars=[]
-const validChars= /[A-Z]/g
-const menu=document.querySelector("#start-menu")
-const altMenu=document.querySelector("#word-list")
+var words=[{word:"ABRACADABRA",hint:"CULTURA POP"},
+{word:"GALAXIA",hint:"FORMAÇÃO"},
+{word:"CIDADE",hint:"LUGAR"},
+{word:"COMPUTADOR",hint:"OBJETO"},
+{word:"ZEUS",hint:"MITOLOGIA"}];
+var keyWord= [];
+var hit=0;
+var miss=0;
+var word=[];
+const dispayedWord= document.querySelector('#keyword');
+var display =[];
+var usedChars=[];
+var wrongChars=[];
+const validChars= /[A-Z]/g;
+const menu=document.querySelector("#start-menu");
+const altMenu=document.querySelector("#word-list");
 const hangman=document.querySelector("#hanged");
+const hint=document.querySelector("#hint");
 
 function getRandomWord() {
-  var word=words[Math.round(Math.random()*words.length)];
-  keyWord=word.split("");
+  word=words[Math.floor(Math.random()*words.length)];
+  keyWord=word.word.split("");
 };
 
 function drawWord() {
@@ -32,6 +38,7 @@ function drawWord() {
     dispayedWord.appendChild(char)
   }
   input.classList.remove('hidden');
+  hint.textContent="Dica:"+word.hint
 };
 
 function primeGame() {
