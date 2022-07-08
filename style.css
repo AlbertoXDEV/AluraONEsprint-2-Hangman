@@ -236,3 +236,23 @@ footer{
   text-align: center;
 
 }
+
+@media screen and (max-width: 650px) {
+
+body{
+    font-size: 2vh;
+  }
+
+  .first-menu{
+    display: block;
+    left: 0;
+    top: 0%;
+    width: 10vh;
+    height: 10vh;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+
+}
