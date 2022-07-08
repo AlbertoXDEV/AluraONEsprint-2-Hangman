@@ -115,14 +115,24 @@
   margin-top: 20%;
 }
 
+.game{
+  max-width: 1200px;
+  max-height: 800px;
+  width: 100%;
+  height: 85vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .word{
-  position: absolute;
-  bottom: 35%;
+  position: relative;
   display: block;
   width: 100%;
   text-align: center;
   font-family: 'Roboto Serif', serif;
   font-size: 3ch;
+  bottom: 35%;
 }
 
 .letter{
@@ -133,19 +143,19 @@
 }
 
 .input{
-  width: 95%;
-  height: 95%;
+  width: 99%;
+  height: 90%;
   opacity: 0%;
-  position: absolute;
-  left: 2%;
-  top: 0%;
 }
 
 .hanged{
 display: block;
 position: absolute;
-left: 37.5%;
-bottom: 45%;
+left: 0;
+width: 15em;
+margin-left: auto;
+right: 0;
+margin-right: auto;
 }
 
 #head{
@@ -190,17 +200,18 @@ bottom: 45%;
 }
 
 .hint{
-  position: absolute;
-  right: 15%;
-  top: 33%;
+  position: relative;
+  left: 70%;
   font-size: 3ch;
   color: white;
+  width: 25%;
+  bottom: 70%;
 }
 .usedLetters{
   text-align: center;
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 25%;
+  bottom: 30%;
 }
 .wrongChar{
   display: inline;

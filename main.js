@@ -11,7 +11,7 @@ const dispayedWord= document.querySelector('#keyword');
 var display =[];
 var usedChars=[];
 var wrongChars=[];
-const validChars= /[A-Z]/g;
+const validChars= /[A-Za-z]/g;
 const menu=document.querySelector("#start-menu");
 const altMenu=document.querySelector("#word-list");
 const hangman=document.querySelector("#hanged");
@@ -77,10 +77,10 @@ function checkChar (event) {
 
     if (event.inputType=="insertText" && validateChar(event)) {
       var letter=[]
-      var idx=keyWord.indexOf(event.data);
+      var idx=keyWord.indexOf(event.data.toUpperCase());
       while (idx != -1) {
           letter.push(idx);
-          idx = keyWord.indexOf(event.data, idx + 1);
+          idx = keyWord.indexOf(event.data.toUpperCase(), idx + 1);
           if (idx==-1) {
             letter.push(idx);
           }
@@ -88,17 +88,17 @@ function checkChar (event) {
 
       if (letter.indexOf(-1)!=-1){
         displayCorrect(letter);
-        usedChars.push(event.data);
-        drawUsedChars(event.data,0)
+        usedChars.push(event.data.toUpperCase());
+        drawUsedChars(event.data.toUpperCase(),0)
         if (hit==keyWord.length) {
         updateGame(8);
       };
         }else{
           ++miss;
-          usedChars.push(event.data);
-          wrongChars.push(event.data);
+          usedChars.push(event.data.toUpperCase());
+          wrongChars.push(event.data.toUpperCase());
           updateGame(miss);
-          drawUsedChars(event.data,1);
+          drawUsedChars(event.data.toUpperCase(),1);
         }
       }
     }

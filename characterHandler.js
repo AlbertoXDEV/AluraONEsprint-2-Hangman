@@ -3,7 +3,7 @@ const used=document.querySelector("#used")
 
 function validateChar(event) {
   if (event.data.match(validChars)==null) {
-    alert("Use somente letras maiúsculas");
+    alert("Use somente letras sem caracteres especiais");
     return false
   }else if (usedChars.indexOf(event.data)!=-1) {
     alert("Você já usou esta letra")
@@ -17,7 +17,7 @@ function validateChar(event) {
 function drawUsedChars(char,type) {
 
   if (type==0) {
-    used.textContent=used.textContent+char
+    used.textContent=used.textContent+char;
   }else if (type==1) {
     let newUsedChar=document.createElement("p");
     newUsedChar.innerHTML=char;
