@@ -1,8 +1,8 @@
 var words=[{word:"ABRACADABRA",hint:"CULTURA POP"},
-{word:"GALAXIA",hint:"FORMAÇÃO"},
-{word:"CIDADE",hint:"LUGAR"},
-{word:"COMPUTADOR",hint:"OBJETO"},
-{word:"ZEUS",hint:"MITOLOGIA"}];
+           {word:"GALAXIA",hint:"ESPAÇO"},
+           {word:"CIDADE",hint:"LUGAR"},
+           {word:"COMPUTADOR",hint:"OBJETO"},
+           {word:"ZEUS",hint:"MITOLOGIA"}];
 var keyWord= [];
 var hit=0;
 var miss=0;

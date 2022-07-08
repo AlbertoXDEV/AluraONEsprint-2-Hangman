@@ -28,12 +28,16 @@
       </div>
 
       <div class="word-list hidden" id="word-list">
-          <label for="inputNewWord">Digite em letras maiusculas uma nova palavra para ser usada</label>
-          <input type="text" id="inputNewWord">
+        <form>
+          <label for="inputNewWord" class="word-list word-label">Digite uma nova palavra para ser usada</label>
+          <input type="text" id="inputNewWord" class="word-list input-word">
+          <label for="inputNewHint" class="word-list hint-label">Digite uma dica para essa palavra</label>
+          <input type="text" id="inputNewHint" class="word-list input-hint">
           <div class=menu-2>
             <button type="submit" class="btn" id="addWord">Adicionar palavra</button>
             <button class="btn btn-low" id="altStart">Começar jogo</button>
           </div>
+        </form>
       </div>
 
       <div id="hanged" class="hanged hidden">
