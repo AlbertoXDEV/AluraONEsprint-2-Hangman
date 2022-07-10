@@ -45,7 +45,14 @@
 
 .word-list{
   text-align: center;
-  display: inline-block;
+  display: block;
+  left: 0%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0%;
+  height: 3ch;
+  border-radius: 1em;
 }
 
 .word-label{
@@ -64,25 +71,34 @@
 
 .input-word{
   top: 25%;
-  width: 20%;
-  left: 40%;
+  width: 40%;
   position: absolute;
 }
 
 .input-hint{
   top: 40%;
-  width: 20%;
-  left: 40%;
+  width: 40%;
   position: absolute;
 }
 
 .menu-2{
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 0%;
+  right: 0%;
   width: 22%;
   height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-2{
+  display: block;
+  width: 100%;
+  height: 60%;
+  border-radius: 2ch;
+  box-shadow: 2px 2px 5px 1px rgb(0, 0, 0);
 }
 
 .menu-3{
@@ -158,40 +174,54 @@ right: 0;
 margin-right: auto;
 }
 
+#pole{
+  width: 100%;
+  height: 100%;
+}
+
 #head{
   position: absolute;
-  top: 1em;
-  left: 6em;
+  top: 5%;
+  left: 40%;
+  width: 23%;
 }
 
 #torso{
   position: absolute;
-  top: 7.4em;
-  left: 6.57em;
+  top: 37%;
+  left: 44%;
+  width: 15%;
 }
 
 #leftArm{
   position: absolute;
-  top: 7.4em;
-  left: 8.37em;
+  top: 37.15%;
+  left: 58.5%;
+  width: 24%;
+  height: 21.2%;
 }
 
 #rigthArm{
   position: absolute;
-  top: 7.45em;
-  left: 3.76em;
+  top: 37.2%;
+  left: 20%;
+  width: 24%;
+  height: 21.2%;
 }
 
 #leftLeg{
   position: absolute;
-  top: 13.95em;
-  left: 7.56em;
+  top: 71.1%;
+  left: 52%;
+  width: 17%;
+  height: 28.5%;
 }
 
 #rigthLeg{
   position: absolute;
-  top: 13.95em;
-  left: 5.3em;
+  top: 71.1%;
+  left: 33.6%;
+  width: 17%;
 }
 
 #hangedpng{
@@ -247,12 +277,97 @@ body{
     display: block;
     left: 0;
     top: 0%;
-    width: 10vh;
-    height: 10vh;
+    width: 20vh;
+    height: 15vh;
     right: 0;
     bottom: 0;
     margin: auto;
   }
 
+.btn{
+  font-weight: bold;
+}
 
+.word-label{
+  font-size: 3vh;
+}
+
+.input-word{
+  width: 55%;
+}
+
+.hint-label{
+  font-size: 3vh;
+}
+
+.input-hint{
+  width: 55%;
+}
+
+.menu-2{
+  top: 55%;
+  width: 45%;
+}
+
+.hidden{
+  display: none;
+}
+
+.hanged{
+  margin-left: auto;
+  margin-right: auto;
+  left: 0%;
+  right: 0%;
+  top: 10%;
+}
+
+#hangedpng{
+  left:-2.3em;
+}
+
+.hint{
+  position: absolute;
+  left: 0%;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.word{
+  bottom: 20%;
+}
+
+.usedLetters{
+  bottom: 19%;
+  font-size: 3ch;
+}
+
+.endmsg{
+  font-size: 1.5ch;
+}
+
+.loss{
+  top:87%;
+}
+
+.reveal{
+  top:67%;
+}
+
+.reveal{
+  font-size: 3.5ch;
+}
+
+.menu-3{
+  display: block;
+  left: 0%;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0%;
+}
+
+.end-btn{
+  width: 40%;
+  font-weight: bold;
 }
