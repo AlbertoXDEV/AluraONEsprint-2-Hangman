@@ -2,7 +2,15 @@ var words=[{word:"ABRACADABRA",hint:"CULTURA POP"},
            {word:"GALAXIA",hint:"ESPAÇO"},
            {word:"CIDADE",hint:"LUGAR"},
            {word:"COMPUTADOR",hint:"OBJETO"},
-           {word:"ZEUS",hint:"MITOLOGIA"}];
+           {word:"ZEUS",hint:"MITOLOGIA"},
+           {word:"CAFE",hint:"COMIDA"},
+           {word:"CARRO",hint:"OBJETO"},
+           {word:"PIZZA",hint:"COMIDA"},
+           {word:"SOL",hint:"ESPAÇO"},
+           {word:"LOKI",hint:"MITOLOGIA"},
+           {word:"SUPERMAN",hint:"CULTURA POP"},
+           {word:"MEDICINA",hint:"ÁREA DE ESTUDO"},
+           {word:"ENGENHARIA",hint:"ÁREA DE ESTUDO"},];
 var keyWord= [];
 var hit=0;
 var miss=0;
