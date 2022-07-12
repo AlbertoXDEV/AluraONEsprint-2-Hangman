@@ -70,6 +70,7 @@ function primeGame() {
   keyWord= [];
   hit=0;
   miss=0;
+  tut.textContent="Clique nos traços para começar a jogar"
 }
 
 function startgame() {
@@ -137,7 +138,11 @@ function changeMenu() {
    input.addEventListener('input',checkChar);
 
    const startButton= document.querySelector('#start');
-   startButton.addEventListener("click",startgame);
+   startButton.addEventListener("click",function () {
+     startgame();
+     displayTutorial()
+    }
+   );
 
    const addNewWordButton=document.querySelector('#newWord')
    addNewWordButton.addEventListener("click",changeMenu);

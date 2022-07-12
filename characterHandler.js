@@ -3,10 +3,10 @@ const used=document.querySelector("#used")
 
 function validateChar(event) {
     if (event.data.match(validChars)==null) {
-      alert("Use somente letras sem caracteres especiais");
+      errorMsg("Use somente letras sem caracteres especiais",1);
       return false
     }else if (usedChars.indexOf(event.data.toUpperCase())!=-1) {
-      alert("Você já usou esta letra")
+      errorMsg ("Você já usou esta letra",1)
       return false
     }else {
       return true;
@@ -16,22 +16,22 @@ function validateChar(event) {
 function validateForm() {
 
     if (newWordInput.value.match(inputValidChars)==null) {
-      alert("Por favor insira uma nova palavra");
+      errorMsg("Por favor insira uma nova palavra",0);
       return false
     } else if (newWordInput.value.match(inputInvalidChars)!=null) {
-      alert("Use somente letras sem caracteres especiais");
+      errorMsg("Use somente letras sem caracteres especiais",0);
       return false
-    } else if (newHintInput.value.match(inputValidChars)==null) {
-      alert("Por favor insira uma nova dica");
+    } else if (newHintInput.value=="") {
+      errorMsg("Por favor insira uma nova dica",0);
       return false
     } else if (newHintInput.value.match(inputInvalidChars)!=null) {
-      alert("Use somente letras sem caracteres especiais");
+      errorMsg("Use somente letras sem caracteres especiais",0);
       return false
     }
     let bool= true
     words.forEach((item, i) => {
       if(newWordInput.value.toUpperCase().indexOf(item.word)!=-1){
-        alert("Essa palava já foi cadastrada")
+        errorMsg("Essa palava já foi cadastrada",0)
         bool= false
       }
     });
