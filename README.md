@@ -18,16 +18,16 @@ Aqui estão algumas imagens de amostra
 
 Gameplay :video_game:
 
-![imgs/showcase.png](forca)
+![forca](imgs/showcase.png)
 
 <br>
 
 Adicionar novas palavras :file_cabinet:
 
-![imgs/showcase-new.png](adicionar palavra)
+![adicionar palavra](imgs/showcase-new.png)
 
 <br>
 
 Gameplay no mobile :iphone:
 
-![imgs/showcase-mobile.png](celular)
+![celular](imgs/showcase-mobile.png)
