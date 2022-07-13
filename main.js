@@ -70,7 +70,7 @@ function primeGame() {
   keyWord= [];
   hit=0;
   miss=0;
-  tut.textContent="Clique nos traços para começar a jogar"
+  tut.textContent="Clique em qualquer parte da forca para começar a jogar"
 }
 
 function startgame() {

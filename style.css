@@ -292,6 +292,11 @@ margin-right: auto;
   font-size: larger;
 }
 
+.reveal-loss{
+  top: 85%;
+  color: aquamarine;
+}
+
 .menu-3{
   display: inline-block;
   position: absolute;
@@ -424,9 +429,13 @@ body{
   margin-left: auto;
   margin-right: auto;
   right: 0%;
+  bottom: 15%;
 }
 
 .end-btn{
   width: 40%;
   font-weight: bold;
+  height: 6vh;
+  bottom: 5vh;
+  position: relative;
 }

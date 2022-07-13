@@ -22,6 +22,7 @@ function animateLoss() {
   winMsg.classList.add("hidden");
   lossMsg.classList.remove("hidden");
   reveal.classList.remove("hidden");
+  reveal.classList.add("reveal-loss");
   reveal.textContent="A palavra era "+keyWord.join("");
   setTimeout(function() {
     lossMsg.classList.add("pop");
@@ -34,7 +35,7 @@ function displayTutorial() {
     tut.textContent= "Você tem 7(sete) tentativas";
     setTimeout(function () {
       tut.classList.add("hidden");
-      tut.textContent="Clique nos traços para começar a jogar";
+      tut.textContent="Clique em qualquer parte da forca para começar a jogar";
     },2500);
   },2500);
 }

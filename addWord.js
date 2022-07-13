@@ -1,5 +1,5 @@
 const inputValidChars=/[A-Za-z]/g
-const inputInvalidChars=/[^A-Za-z]/g
+const inputInvalidChars=/[^A-Za-z\Ç\ç]/g
 const newWordInput=document.querySelector("#inputNewWord");
 const newHintInput=document.querySelector("#inputNewHint");
 const submitWrdBtn=document.querySelector("#addWord");
